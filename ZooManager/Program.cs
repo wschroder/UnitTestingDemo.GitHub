@@ -7,7 +7,7 @@ namespace UnitTestingDemo
     {
         static void Main(string[] args)
         {
-            RetailStore giftShop = RetailFactory.CreateGiftShop();
+            RetailStore giftShop = RetailStoreFactory.CreateGiftShop();
 
             RetailItem item = giftShop.GetItem("Merchandise", "T-Shirt");
             

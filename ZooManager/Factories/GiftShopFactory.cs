@@ -2,11 +2,16 @@
 
 namespace ZooManager.Factories
 {
-    public class GiftShopFactory : RetailFactory
+    public static class RetailStoreFactory
     {
-        public override string Name => "Gift Shop";
-
-        public override void PopulateDepartments(RetailStore store)
+        public static RetailStore CreateGiftShop()
+        {
+            var store = new RetailStore("Gift Shop");
+            PopulateDepartments(store);
+            return store;
+        }
+         
+        private static void PopulateDepartments(RetailStore store)
         {
             var dept = new RetailDepartment("Snacks");
             dept.AddItem("Ice cream", 1.25m);
